@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load static %} {% block content %} {% spaceless %}
+{% if categories %}
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<span class="navbar-title">Категорії</span>
+	</div>
+	<ul class="category-list">
+		{% for item in categories %}
+		<li>
+			<a href="{{ item.get_absolute_url }}"> {{ item.category }} </a>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>
+{% endif %} {% if articles %} {% for item in articles %}
+<div class="article-block">
+	<a href="{{ item.get_absolute_url }}">
+		<h4>{{ item.title }}</h4>
+	</a>
+	<h5>{{ item.pub_date|date:"j E Y"|safe|linebreaks }}</h5>
+	<p>{{ item.description|safe|escape|striptags|truncatewords_html:32 }}</p>
+</div>
+{% endfor %} {% endif %} {% comment %}
+<a href="{% url 'articles-list' %}">
+	<h4>Всі публікації</h4>
+</a>
+{% endcomment %} {% endspaceless %} {% endblock %}

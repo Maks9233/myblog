@@ -1,0 +1,287 @@
+/* Основні стилі */
+body {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	border-radius: 8px;
+}
+
+.breadcrumb {
+	background-color: #f0f0f0;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.breadcrumb li {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 0.9em;
+}
+
+.breadcrumb li:not(:last-child):after {
+	content: ">";
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #666;
+}
+
+.breadcrumb li a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.breadcrumb li a:hover {
+	color: #007bff;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2.5em;
+	color: #333;
+}
+
+/* Навігація */
+.navbar {
+	background-color: #007bff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.navbar-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.category-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.category-list li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.category-list li a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.category-list li a:hover {
+	background-color: #77b5f7;
+}
+
+.article-block {
+	margin-bottom: 20px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.article-block a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.article-block a:hover {
+	color: #007bff;
+}
+
+.article-block h4 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1.8em;
+	color: #333;
+}
+
+.article-block h5 {
+	margin-bottom: 10px;
+	color: #666;
+	font-size: 1em;
+}
+
+.article-block p {
+	margin-bottom: 10px;
+	line-height: 1.5;
+	color: #555;
+}
+
+.container-image {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.container-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Стилі для Fotorama */
+.fotorama {
+	margin: 20px auto;
+	max-width: 100%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.fotorama__stage {
+	display: inline-block;
+	max-width: 100%;
+	text-align: center;
+}
+
+.fotorama__img {
+	max-width: 100%;
+	max-height: 700px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.fotorama__caption {
+	background-color: rgba(0, 123, 255, 0.8);
+	color: #fff;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.fotorama__caption__wrap {
+	padding: 10px;
+	text-align: center;
+	font-size: 1em;
+	color: #fff;
+}
+
+/* Стилі для сторінки списку статей (articles_list.html) */
+.articles-row {
+	margin-bottom: 20px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.articles-row a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.articles-row a:hover {
+	color: #007bff;
+}
+
+.articles-row h4 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 2em;
+	color: #333;
+}
+
+.articles-row h5 {
+	margin-bottom: 10px;
+	color: #666;
+	font-size: 1.2em;
+}
+
+.articles-row p {
+	margin-bottom: 10px;
+	line-height: 1.5;
+	color: #555;
+}
+
+/* Стилі для сторінки деталізації статті (article_detail.html) */
+.article-detail {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.article-detail h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 2.5em;
+	color: #333;
+}
+
+.article-detail h5 {
+	margin-bottom: 10px;
+	color: #666;
+	font-size: 1.2em;
+}
+
+.article-detail p {
+	margin-bottom: 10px;
+	line-height: 1.5;
+	color: #555;
+}
+
+/* Стилі для контейнера зображення в статті */
+.article-detail .container-image {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.article-detail .container-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Медіа-запити для адаптивного дизайну */
+@media (max-width: 768px) {
+	.container {
+		 padding: 10px;
+	}
+
+	h1 {
+		 font-size: 2em;
+	}
+
+	.article-block h4 {
+		 font-size: 1.5em;
+	}
+
+	.articles-row h4 {
+		 font-size: 1.8em;
+	}
+
+	.fotorama__stage {
+		 max-height: 300px;
+	}
+}
